@@ -1,7 +1,7 @@
 {
-  "name": "express-api-template-1",
+  "name": "lol",
   "version": "2.0.0",
-  "description": "Minimal starter project for a Node.js RESTful API based off express generator",
+  "description": "deez",
   "main": "index.js",
   "devDependencies": {
     "eslint": "^8.6.0",
@@ -34,17 +34,7 @@
     "fix": "yarn fix:code && yarn fix:other",
     "test:code": "eslint --ignore-path .gitignore --ignore-path .prettierignore --ext .js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NotKaskus/express-api-template.git"
-  },
   "keywords": [
     "nodejs"
   ],
-  "author": "KASKUSTTV",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/NotKaskus/express-api-template/issues"
-  },
-  "homepage": "https://github.com/NotKaskus/express-api-template#readme"
 }
