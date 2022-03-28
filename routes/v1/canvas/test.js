@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 		});
 	};
 try{
-    const base = `https://devilish-api.herokuapp.com/api/v1/canvas/changemymind?avatar=${image}`
+    const base = `https://devilish-api.herokuapp.com/api/v1/canvas/changemymind?avatar=${avatar}`
     res.json({url: base})
 }catch(error){ 
 res.send({error: error})	
