@@ -9,13 +9,18 @@ router.get('/', (req, res) => {
 			example: `${req.protocol}://${req.get('host')}/api/v1/canvas/affect?avatar=AVATAR_URL`
 		});
 	};
-	Canvacord.Canvas.blur(req.query.avatar)
+		Canvacord.Canvas.affect(req.query.avatar)
 	.then(data => {
 		var result = Buffer.from(data, 'affect.jpeg') // Use jpeg mime type for faster response
 		res.setHeader('Content-Type', 'image/jpeg')
 		res.end(result)
 	})
-	.catch(err => console.log(err.stack))
+	.catch(err => {
+		res.json({
+			error: err.stack
+		})
+		console.log(err.stack)
+	})
 })
 
 module.exports = router;

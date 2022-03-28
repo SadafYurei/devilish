@@ -15,7 +15,12 @@ router.get('/', (req, res) => {
 		res.setHeader('Content-Type', 'image/jpeg')
 		res.end(result)
 	})
-	.catch(err => console.log(err.stack))
+	.catch(err =>{
+		res.json({
+			error: err.stack
+		})
+		console.log(err.stack)
+	})
 })
 
 module.exports = router;

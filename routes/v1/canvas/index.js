@@ -9,5 +9,6 @@ router.use('/beautiful', require('./beautiful'))
 router.use('/changemymind', require('./changemymind'))
 router.use('/delete', require('./delete'))
 router.use('/jail', require('./jail'))
+router.use('/blur', require('./blur'))
 
 module.exports = router;
