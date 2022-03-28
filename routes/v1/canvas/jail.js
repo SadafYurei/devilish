@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 	})
 	.catch(err => {
 		res.json({
-			error: err.stack
+			error: "Invalid image, or there was a error!"
 		})
 		console.log(err.stack)
 	})
