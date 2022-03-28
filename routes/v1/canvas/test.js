@@ -9,18 +9,12 @@ router.get('/', (req, res) => {
 			example: `${req.protocol}://${req.get('host')}/api/v1/canvas/affect?avatar=AVATAR_URL`
 		});
 	};
-		Canvacord.Canvas.blur(req.query.avatar)
-	.then(data => {
-		var result = Buffer.from(data, 'affect.jpeg') // Use jpeg mime type for faster response
-		res.setHeader('Content-Type', 'image/jpeg')
-		res.end(result)
-	})
-	.catch(err => {
-		res.json({
-			error: "Invalid image, or there was a error!"
-		})
-		console.log(err.stack)
-	})
+try{
+    const base = `https://devilish-api.herokuapp.com/api/v1/canvas/changemymind?avatar=${image}`
+    res.json({url: base})
+}catch(error){ 
+res.send({error: error})	
+}
 })
 
 module.exports = router;
